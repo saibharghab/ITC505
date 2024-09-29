@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Delivery Example</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Great Vibes', cursive;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 48px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        #current-time {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>About Volkswagen Polo </h1>
+    <p>German automaker Volkswagen has been producing the B-segment supermini, or Polo, since 1975. Throughout its production run, hatchback, saloon, and estate versions are available in Europe and other markets across the world. There have been six distinct generations of the Polo created as of 2018, each distinguished by a "Series" or "Mark" number.</p>
+<p>Midway through manufacturing, certain generations received a facelift; the modified versions were informally identified by adding the letter F to the mark number, such as Mk2F. Since certain enthusiasts and members of the automotive press view the facelifts as distinct models, they have unofficially given the earlier iterations of the Polo Mk1 through Mk7 titles.In addition, a two- or three-character Volkswagen Group Typ number is used to identify each Polo model. Roman or Arabic numerals are used in the official VW Polo history to refer to Mark I through Mark IV, with facelifted variations referred to as "Phase II" vehicles. Throughout the car's existence, the body shape has changed. It started off as a hatchback and was based on the Audi 50.The Volkswagen Derby was the name given to the saloon variant.</p>
+    <div id="current-time"></div>
+ <script>
+        // Get the current date and time
+        const currentDate = new Date();
+        const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+        document.getElementById('current-time').innerText = currentDate.toLocaleString('en-US', options);
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Your Name | This page was created for ITC505 Lab 3.</p>
+    </footer>
+</body>
+</html>
