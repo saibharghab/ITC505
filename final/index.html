@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights Out Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #game-board {
+            display: grid;
+            grid-template-columns: repeat(5, 60px);
+            gap: 5px;
+            margin: 20px auto;
+            width: max-content;
+        }
+        .square {
+            width: 60px;
+            height: 60px;
+            background-color: #ffd700;
+            border: 1px solid #333;
+            cursor: pointer;
+        }
+        .square.is-off {
+            background-color: #333;
+        }
+        button, p {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lights Out</h1>
+    <p>Click on the squares to toggle the lights. Turn all the lights off to win!</p>
+    <p>Moves: <span id="moveCounter">0</span></p>
+    <p>Time Elapsed: <span id="timer">0</span> seconds</p>
+    <button id="restart">Restart Game</button>
+    <div id="game-board"></div>
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+        <script>
+            var x = document.lastModified;
+            document.getElementById('lastModified').textContent = x;
+        </script>
+    </footer>
+    <script src="script.js"></script>
+    <section id="addendum">
+      <h2>Game Development Addendum</h2>
+      <p>As discussed, there are many crucial steps in publishing a “Lights Out” game using HTML, CSS, and JavaScript. Below, we describe the development process:</p>
+      
+      <h3>HTML Structure</h3>
+      <p>The game board is created using <code>&lt;div&gt;</code> elements to represent the squares. These elements are dynamically added to the page using JavaScript.</p>
+      
+      <h3>CSS Grid Layout</h3>
+      <p>To position the squares in a grid and define their properties, CSS Grid was utilized. This ensures a responsive and visually appealing layout for the game board.</p>
+      
+      <h3>JavaScript Functionality</h3>
+      <ul>
+        <li><strong>Toggle Mechanism:</strong> JavaScript handles the toggle behavior of squares, switching between "on" and "off" states when a square is clicked.</li>
+        <li><strong>Neighbor Logic:</strong> Clicking a square also toggles the adjacent squares (top, bottom, left, and right).</li>
+        <li><strong>Victory Condition:</strong> The game checks whether all squares are "off" at the end of each action. If so, the player wins, and a congratulatory message is displayed.</li>
+      </ul>
+      
+      <h3>Additional Features</h3>
+      <p>Several features were considered to enhance the gameplay experience:</p>
+      <ul>
+        <li><strong>Restart Button:</strong> A button to restart the game from the beginning, allowing users to start a new challenge.</li>
+        <li><strong>Move Counter:</strong> Tracks the number of actions taken by the player, encouraging efficiency.</li>
+        <li><strong>Timer:</strong> Adds a time-based challenge to make the game more competitive and engaging.</li>
+      </ul>
+      
+      <h3>Testing and Responsiveness</h3>
+      <p>The game was tested across multiple browsers to ensure compatibility and responsiveness. It was designed to work seamlessly on desktop and mobile devices.</p>
+      
+      <h3>User Experience</h3>
+      <p>For users interested in casual games, the focus was on creating an enjoyable and straightforward gaming experience. Feedback and suggestions from players were used to address any issues and improve the overall design.</p>
+    </section>
+</body>
+</html>
